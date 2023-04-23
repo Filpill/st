@@ -1,6 +1,6 @@
-# st - simple terminal - Filip's Fork
------------------------------------
-st is a simple terminal emulator for X which sucks less.
+st - simple terminal
+------------
+Filip's Fork of st - A simple terminal emulator for X which sucks less.
 
 Requirements
 ------------
