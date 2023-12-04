@@ -95,42 +95,49 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#222326", /*black*/
-	"#a03434", /*red*/
-	"#7d843b", /*green*/
-	"#c58254", /*yellow*/
-	"#60829e", /*blue*/
-	"#685070", /*purple*/
-	"#4a706b", /*teal*/
-	"#656d74", /*grey*/  
 
-	/* 8 bright colors */
-	"#373b41",  /*black*/
-	"#cc6666",  /*red*/
-	"#b5bd68",  /*green*/
-	"#f0c674",  /*yellow*/
-	"#81a2be",  /*blue*/
-	"#b294bb",  /*purple*/
-	"#74b3aa",  /*teal*/
-	"#97a3ad",  /*grey*/  
+      /* 8 normal colors */
+      [0] = "#000000", /* black   */
+      [1] = "#DA4939", /* red     */
+      [2] = "#519F50", /* green   */
+      [3] = "#FFD24A", /* yellow  */
+      [4] = "#6D9CBE", /* blue    */
+      [5] = "#D0D0FF", /* magenta */
+      [6] = "#6E9CBE", /* cyan    */
+      [7] = "#FFFFFF", /* white   */
 
-	[255] = 0,
+      /* 8 bright colors */
+      [8]  = "#323232", /* black   */
+      [9]  = "#FF7B6B", /* red     */
+      [10] = "#82D182", /* green   */
+      [11] = "#FFFF7C", /* yellow  */
+      [12] = "#9FCEF0", /* blue    */
+      [13] = "#FFFFFF", /* magenta */
+      [14] = "#A0CEF0", /* cyan    */
+      [15] = "#FFFFFF", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#1d1f21", /* default foreground colour */
-	"#c5c8c6", /* default background colour */
+      /* special colors */
+      [256] = "#2b2b2b", /* background */
+      [257] = "#cac8cd", /* foreground */
 };
 
-
 /*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
+ *  * Default colors (colorname index)
+ *   * foreground, background, cursor
+ *    */
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 256;
+
+/*
+ *  * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ *   * will reverse too. Another logic would only make the simple feature too
+ *    * complex.
+ *     */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
+
 
 /*
  * Default shape of cursor
