@@ -103,30 +103,7 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-
-      /* 8 normal colors */
-      [0] = "#000000", /* black   */
-      [1] = "#DA4939", /* red     */
-      [2] = "#519F50", /* green   */
-      [3] = "#FFD24A", /* yellow  */
-      [4] = "#6D9CBE", /* blue    */
-      [5] = "#D0D0FF", /* magenta */
-      [6] = "#6E9CBE", /* cyan    */
-      [7] = "#FFFFFF", /* white   */
-
-      /* 8 bright colors */
-      [8]  = "#323232", /* black   */
-      [9]  = "#FF7B6B", /* red     */
-      [10] = "#82D182", /* green   */
-      [11] = "#FFFF7C", /* yellow  */
-      [12] = "#9FCEF0", /* blue    */
-      [13] = "#FFFFFF", /* magenta */
-      [14] = "#A0CEF0", /* cyan    */
-      [15] = "#FFFFFF", /* white   */
-
-      /* special colors */
-      [256] = "#2b2b2b", /* background */
-      [257] = "#e6e6e6", /* foreground */
+#include "themes/tokyo-night-storm.h"
 };
 
 /*
